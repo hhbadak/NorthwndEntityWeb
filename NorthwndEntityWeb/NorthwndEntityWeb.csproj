@@ -43,7 +43,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,13 +75,85 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\assets\css\Slider.css" />
-    <Content Include="Assets\assets\scripts\dene.js" />
-    <Content Include="Assets\assets\scripts\jquery-3.6.4.min.js" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.rtl.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.rtl.css" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.rtl.min.css" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.bundle.js" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.bundle.min.js" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.esm.js" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.esm.min.js" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.js" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.min.js" />
+    <Content Include="Assets\Css\Slide.css" />
+    <Content Include="Assets\Jquery\css\Slider.css" />
+    <Content Include="Assets\Jquery\scripts\dene.js" />
+    <Content Include="Assets\Jquery\scripts\jquery-3.6.4.min.js" />
     <Content Include="List.aspx" />
+    <Content Include="NORTHWND.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NORTHWND.Context.cs</LastGenOutput>
+      <DependentUpon>NORTHWND.edmx</DependentUpon>
+    </Content>
+    <Content Include="NORTHWND.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NORTHWND.edmx</DependentUpon>
+      <LastGenOutput>NORTHWND.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alphabetical_list_of_products.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Sales_for_1997.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Current_Product_List.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDemographics.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_and_Suppliers_by_City.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrderHist_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrdersDetail_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustOrdersOrders_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Sales_by_Country_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
     <Compile Include="List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -81,9 +161,122 @@
     <Compile Include="List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NORTHWND.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NORTHWND.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NORTHWND.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NORTHWND.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NORTHWND.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders_Qry.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Details.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Details_Extended.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Subtotals.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products_Above_Average_Price.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products_by_Category.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Sales_for_1997.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Region.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SalesByCategory_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_by_Category.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_by_Year_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Totals_by_Amount.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Shippers.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Summary_of_Sales_by_Quarter.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Summary_of_Sales_by_Year.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ten_Most_Expensive_Products_Result.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Territories.cs">
+      <DependentUpon>NORTHWND.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.rtl.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.bundle.js.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.esm.js.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.esm.min.js.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.js.map" />
+    <Content Include="Assets\bootstrap-5.3.0\js\bootstrap.min.js.map" />
+    <EntityDeploy Include="NORTHWND.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NORTHWND.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="NORTHWND.edmx.diagram">
+      <DependentUpon>NORTHWND.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -91,6 +284,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
