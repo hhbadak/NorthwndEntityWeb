@@ -101,6 +101,23 @@
     <Content Include="Assets\Jquery\css\Slider.css" />
     <Content Include="Assets\Jquery\scripts\dene.js" />
     <Content Include="Assets\Jquery\scripts\jquery-3.6.4.min.js" />
+    <Content Include="Images\AliceMutton.jpeg" />
+    <Content Include="Images\AntonsGumbo.jpg" />
+    <Content Include="Images\beverages.jpg" />
+    <Content Include="Images\chefAnton%27sCajunSeasoning.jpg" />
+    <Content Include="Images\Condiments.jpeg" />
+    <Content Include="Images\Confections.jpg" />
+    <Content Include="Images\DairyProducts.jpg" />
+    <Content Include="Images\Grains.jpg" />
+    <Content Include="Images\GuaranaFantastica.png" />
+    <Content Include="Images\Meat.jpeg" />
+    <Content Include="Images\MishiKobeNiku.jpeg" />
+    <Content Include="Images\PerthPasties.jpg" />
+    <Content Include="Images\Produce.jpg" />
+    <Content Include="Images\RössleSauerkraut.jpg" />
+    <Content Include="Images\SeaFood.jpg" />
+    <Content Include="Images\SingaporeanHokkienFriedMee.jpg" />
+    <Content Include="Images\ThüringerRostbratwurst.jpg" />
     <Content Include="List.aspx" />
     <Content Include="NORTHWND.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
